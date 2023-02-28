@@ -1,9 +1,11 @@
 a = int(input())
-num = a // 1000
+if 9999 < a < 100000
+num = a // 10000
+num0 = (a // 1000) % 10
 num1 = (a // 100) % 10
 num2 = (a // 10) % 10
 num3 = (a // 1) % 10
-b = num * num1 * num2 * num3
-summa =  num + num1 + num2 + num3
-print(b)
-print(summa)
+print(num2)
+print(num3)
+else:
+    print(Неправильное число)
