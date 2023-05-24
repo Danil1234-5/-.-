@@ -267,3 +267,286 @@ while 20 > a:
     b += 1
     if a > 20:
         print(b)
+
+# Циклы с параметром 1
+a = int(input())
+print(a * 25.4 / 10)
+
+a = int(input())
+print(a * 80)
+
+e = 2.7
+for i in range(1, 21):
+    print(e ** i)
+
+a = 1.1
+for i in range(0, 21):
+    print(a + i)
+
+a = 2.1
+for _ in range(8):
+    a += 0.1
+    print(a)
+
+s = 0
+for i in range(100):
+    if i % 2 == 0 and s < 20:
+        s += 1
+        print(i)
+
+s = 0
+for i in range(100):
+    if i % 2 != 0 and s < 20:
+        s += 1
+        print(i)
+
+from math import *
+
+for i in range(2, 21):
+    if i % 2 == 0:
+        print(sqrt(i))
+
+a = float(input("Цена конфет за 1 кг:"))
+for i in range(2, 11):
+    print(i, "кг стоит", i * a)
+
+a, b = int(input()), int(input())
+for y in range(a, b + 1):
+    print("x =", y ** 2)
+
+a, b = int(input()), int(input())
+for y in range(a, b + 1):
+    x = 1 / (2 * y)
+    print(x)
+
+a, b = int(input()), int(input())
+e = 2.7
+for x in range(a, b + 1):
+    y = e ** x - 1
+    print(y)
+
+a, b = int(input()), int(input())
+for x in range(a, b + 1):
+    y = (x - 1) ** 2
+    print(y)
+
+for x in range(1, 20):
+    t = x + 1
+    y = 2 * t ** 2 + 2 * t + 2
+    print(y)
+
+for x in range(2, 20):
+    if x % 2 == 0:
+        f = 2 * x
+        z = 8 * f ** 3 - f
+        print(z)
+
+
+# Циклы с условием 1
+d = 10
+while d < 23:
+    print(d * 25.4 / 10)
+    d = d + 1
+
+d = 1
+while d < 21:
+    print(d * 80)
+    d += 1
+
+e = 2.7
+stepen = 1
+while stepen < 21:
+    print(e**stepen)
+    stepen += 1
+
+a = 1.1
+while a < 22.1:
+    print(a)
+    a += 1
+
+a = 2.1
+while a < 3:
+    print(a)
+    a += 0.1
+
+a = 0
+d = 0
+while a < 21:
+    if d % 2 == 0:
+        print(d)
+    d += 1
+    a += 1
+
+a = 0
+d = 0
+while a < 21:
+    if d % 2 != 0:
+        print(d)
+    d += 1
+    a += 1
+
+from math import *
+a = 2
+while a < 21:
+    if a % 2 == 0:
+        print(sqrt(a))
+    a += 2
+
+a = 2
+b = float(input("Введите стоимость:"))
+while a < 11:
+    print(a * b)
+    a += 1
+
+from math import *
+a, b = int(input()), int(input())
+x = a
+while x <= b:
+    y = sqrt(x)
+    print(x,y)
+    x += 1
+
+from math import *
+a, b = int(input()), int(input())
+x = a
+e = 2.7
+while x <= b:
+    y = e ** x - 1
+    print(x, y)
+    x += 1
+
+from math import *
+a, b = int(input()), int(input())
+x = a
+while x <= b:
+    y = 1/(2*x)
+    print(x,y)
+    x += 1
+
+from math import *
+a, b = int(input()), int(input())
+x = a
+while x <= b:
+    y = (x - 1)**2
+    print(x,y)
+    x += 1
+
+x = 1
+while x < 21:
+    t = x + 1
+    print("y =", 2*t**2 + 2*t + 2)
+    x += 1
+
+x = 2
+while x < 21:
+    f = 2*x
+    print("z =", 8*f**3 - f)
+    x += 2
+
+
+#Цикл с условием 2
+from math import *
+P = int(input())
+koren = 2
+while sqrt(koren) < P - 1:
+    koren += 1
+print(koren)
+
+from math import *
+A, B = int(input()), int(input())
+if A < B:
+    while A < B:
+        print(A)
+        A += 1
+
+from math import *
+A, B = int(input()), int(input())
+if A < B:
+    while A < B:
+        print(B)
+        B -= 1
+
+from math import *
+N = int(input())
+if N > 1:
+    K = 0
+    while 3*K < N:
+        K += 1
+    else:
+        print(3*K, K)
+
+from math import *
+N = int(input())
+if N > 1:
+    K = 0
+    while 3*K < N:
+        K += 1
+    print(K)
+
+from math import *
+N = int(input())
+a = 0
+while N > a:
+    print(a)
+    a += 1
+
+from math import *
+a = int(input())
+n = 1
+b = 0
+while b < a:
+    b += 1/n
+    n += 1
+else:
+    while b > a:
+        print(b)
+        b += 1/n
+        n += 1
+
+from math import *
+n = int(input())
+a = 0
+while n > a**2:
+    a += 1
+    if a**2 > n:
+        print(a)
+
+from math import *
+a = 1
+while 200 > a:
+    if a % 17 == 0:
+        print(a)
+        break
+    else:
+        a += 1
+
+from math import *
+a = 599
+while 600 > a:
+    if a % 28 == 0:
+        print(a)
+        break
+    else:
+        a -= 1
+
+from math import *
+a = 10
+b = 0
+while 20 > a:
+    a = a + a*0.1
+    b += 1
+    if a > 20:
+        print(b)
+        
+from math import *
+n = int(input())
+a = 1
+b = 0
+while n > a:
+    b = b + (2*a - 1)/(2*a)
+    a += 1
+    if n < a:
+        b = b * 100000
+        b = b // 10
+        b /= 10000
+        print(b)
