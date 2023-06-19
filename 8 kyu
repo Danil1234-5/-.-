@@ -1,0 +1,18 @@
+1.def opposite(number):
+    number *= -1
+    return(number)
+   
+2.def problem(a):
+    if type(a) == str:
+        return("Error")
+    return(a * 50 + 6)
+    
+3.def boolean_to_string(b):
+    return(str(b))
+    
+4.def bin_to_decimal(inp):
+    return(int(inp, 2))
+    
+5.def make_upper_case(s):
+    return(str(s.upper()))
+    
