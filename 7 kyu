@@ -1,0 +1,10 @@
+1.def add_binary(a,b):
+    c = a + b
+    v = bin(c)
+    return(str(v)[2:])
+2.def switcheroo(s):
+    new_s = s.replace("b", "x").replace("a", "b").replace("x", "a")
+    return(new_s)
+3.
+4.
+5.
