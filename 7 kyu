@@ -5,6 +5,22 @@
 2.def switcheroo(s):
     new_s = s.replace("b", "x").replace("a", "b").replace("x", "a")
     return(new_s)
-3.
-4.
-5.
+3.from datetime import datetime
+from datetime import timedelta
+def date_nb_days(a0, a, p):
+    day = 0
+    start = '2016/01/01'
+    while a0 < a:
+        a0 = a0 + (a0*p/100/360)
+        day += 1
+    date = datetime.strptime(start, '%Y/%m/%d')
+    date += timedelta(days=day)
+    return datetime.strftime(date, '%Y-%m-%d')
+4.def angle(n):
+    return (n - 2) * 180
+5.def no_ifs_no_buts(a, b):
+    return {
+        a == b: str(a) + " is equal to " + str(b),
+        a < b: str(a) + " is smaller than " + str(b),
+        a > b: str(a) + " is greater than " + str(b),
+    }[True]
