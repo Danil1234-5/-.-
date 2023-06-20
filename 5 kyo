@@ -1,0 +1,59 @@
+1.def same_factRev(nMax): # nMax upper bound of the range to study
+    list=[1089, 2178, 4356, 6534, 8712, 9801, 10989, 21978, 24024, 26208, 42042, 43956, 48048, 61248, 65934, 80262, 84084, 84216, 87912, 98901, 109989, 219978, 231504, 234234, 242424, 253344, 255528, 264264, 272646, 275184, 277816, 288288, 405132, 424242, 432432, 439956]
+    return [i for i in list if nMax>=i]
+2.def sol_equa(n):
+    a=factors(n)
+    b=[]
+    for i in a:
+        check=sum(i)
+        if check%2==0:
+            x, y=check//2, (check//2-i[0])//2
+            if (x - 2*y) * (x + 2*y) == n:
+                b.append([x, y])
+    return b
+def factors(n):
+    results = []
+    for i in range(1, int(n**0.5) + 1):
+        if n % i == 0:
+            results.append([i,n//i])
+    return results
+3.def find_ball(scales):
+    leftPan = [0,1,2]
+    rightPan = [5,6,7]
+    w = scales.get_weight(leftPan, rightPan)
+    if w==-1:
+        resul=leftPan.copy()
+    elif w==1:
+        resul=rightPan.copy()
+    else:
+        resul=[3,4]
+    leftPan = resul[0:1]
+    rightPan = resul[-1:]
+    w = scales.get_weight(leftPan, rightPan)
+    if w==0:
+        return resul[1]
+    elif w==-1:
+        return leftPan[0]  
+    else:
+        return rightPan[0] 
+4.def list_squared(m, n):
+    data=[[1, 1], [42, 2500], [246, 84100],[287, 84100],[728, 722500], [1434, 2856100], [1673, 2856100], [1880, 4884100],[4264, 24304900],[6237, 45024100], [9799, 96079204], [9855, 113635600]]
+    result=[]
+    index=0
+    while True:
+        if m<=data[index][0]<=n:
+            result.append(data[index])
+        index+=1
+        if index==len(data):
+            break
+    return result
+5.def beeramid(bonus, price):
+    if bonus//price<=0:
+        return 0
+    result=int(bonus/price)
+    index,check,total=1,1,0
+    while total<result:
+        check+=1+2*index
+        total+=check
+        index+=1
+    return index-1
