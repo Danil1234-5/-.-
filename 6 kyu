@@ -1,0 +1,92 @@
+1.def parts_sums(ls):
+    sums = [sum(ls)]
+    for i in ls:
+        sums.append(sums[-1]-i)
+    return sums
+2.def solution(n):
+    result=""
+    while n>0:
+        if n//1000>=1:
+            result+="M"
+            n-=1000
+            continue
+        elif n//900>=1:
+            result+="CM"
+            n-=900
+            continue
+        elif n//500>=1:
+            result+="D"
+            n-=500
+            continue
+        elif n//400>=1:
+            result+="CD"
+            n-=400
+            continue
+        elif n//100>=1:
+            result+="C"
+            n-=100
+            continue
+        elif n//90>=1:
+            result+="XC"
+            n-=90
+            continue
+        elif n//50>=1:
+            result+="L"
+            n-=50
+            continue
+        elif n//40>=1:
+            result+="XL"
+            n-=40
+            continue
+        elif n//10>=1:
+            result+="X"
+            n-=10
+            continue
+        elif n//9>=1:
+            result+="IX"
+            n-=9
+            continue
+        elif n//5>=1:
+            result+="V"
+            n-=5
+            continue
+        elif n//4>=1:
+            result+="IV"
+            n-=4
+            continue
+        elif n//1>=1:
+            result+="I"
+            n-=1
+    return result
+3.def two_sum(numbers, target):
+    for i in range(len(numbers)):
+        for j in range(i+1,len(numbers)):
+            if numbers[j]+numbers[i]==target:
+                return (i,j)
+4.def arrange(s):
+    ls=[]
+    left, right=0, len(s)-1
+    while left<=right:
+        if left<=right:
+            ls.append(s[left])
+            left+=1
+        if left<=right:
+            ls.append(s[right])
+            right-=1
+        if left<=right:
+            ls.append(s[right])
+            right-=1
+        if left<=right:
+            ls.append(s[left])
+            left+=1
+    return ls
+5.def cycle(n):
+    if n%2==0 or n%5==0:
+        return -1
+    count=0
+    value=1
+    while True:
+        value=value*10%n
+        count+=1
+        if value==1:
+            return count
